@@ -1,0 +1,545 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "common_colors";
+@import "fonts";
+@import "mixins";
+
+$standard-spacing: 40px;
+
+/*-------------------------------------------------------------
+                    GLOBAL STYLES
+---------------------------------------------------------------*/
+
+body,html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: $tutor-default-font-list;
+  font-weight: 300;
+  color: #424242;
+}
+
+.body {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 900;
+}
+
+a {
+  color: #27ae60;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.space10 {
+  margin-bottom: 10px;
+}
+
+.space15 {
+  margin-bottom: 15px;
+}
+
+.space20 {
+  margin-bottom: 20px;
+}
+
+.space25 {
+  margin-bottom: 25px;
+}
+
+.space30 {
+  margin-bottom: 30px;
+}
+
+.space35 {
+  margin-bottom: 35px;
+}
+
+.space40 {
+  margin-bottom: $standard-spacing;
+}
+
+.space50 {
+  margin-bottom: 50px;
+}
+
+.space60 {
+  margin-bottom: 60px;
+}
+
+.space70 {
+  margin-bottom: 70px;
+}
+
+.space80 {
+  margin-bottom: 80px;
+}
+
+.space90 {
+  margin-bottom: 90px;
+}
+
+.space100 {
+  margin-bottom: 100px;
+}
+
+/*-------------------------------------------------------------
+                    HEADER STYLES
+---------------------------------------------------------------*/
+
+header {
+
+  .navbar-default {
+    background: white;
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 10px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+
+    > .container {
+      width: 100%;
+      padding: 0 10px;
+    }
+
+    .navbar-nav > li > a {
+      font-size: 15px;
+      margin-top: 5px;
+    }
+
+    .nav > li > a {
+      position: relative;
+      display: block;
+      padding: 10px 20px;
+    }
+
+    .topnav-pages {
+      background: #fff;
+    }
+
+    .navbar-brand {
+      display: block;
+      height: 41px;
+      width: 265px;
+      margin: 0 !important;
+      background: image-url("openstax-tutor-beta-logo.svg") no-repeat;
+      background-size: 100%;
+    }
+
+    .navbar-brand-rice {
+      display: block;
+      float: right;
+      margin: 5px 0 0 30px;
+      background: image-url("osu-primarylogo-2-compressor.jpg") no-repeat;
+      background-size: 100%;
+      height: 30px;
+      width: 85px;
+    }
+
+    .navbar-default {
+
+      .sign-in { @include tutor-button(); }
+
+    }
+
+    .navbar-nav.links {
+
+      li a {
+        // enforce uniform size for all navbar links
+        font-size: 16px;
+        line-height: 1.4;
+        padding: 9px 18px;
+        margin: 0 10px;
+      }
+
+    }
+
+  }
+
+}
+
+/*-------------------------------------------------------------
+                    HOME STYLES
+---------------------------------------------------------------*/
+
+.tutor-home {
+  $dark-blue: #002469;
+  .body-container {
+    width: 100%;
+    min-height: 700px;
+    margin-top: 60px;
+    background: image-url("tutor-background.svg") no-repeat bottom center / cover;
+    padding: 80px $standard-spacing $standard-spacing $standard-spacing;
+    text-align: center;
+
+    h1 {
+      margin: 0;
+      padding: 0;
+      font-weight: 900;
+      font-size: 60px;
+      font-family: $tutor-default-bold-font-list;
+      color: $dark-blue;
+    }
+    .lead {
+      font-size: 18px;
+      line-height: 30px;
+      color: $dark-blue;
+      margin: 50px auto 0 auto;
+      max-width: 600px;
+    }
+    a {
+      display: block;
+      transition: color 0.4s, background-color 0.4s;
+      &:hover, &:focus {
+        text-decoration: none;
+      }
+    }
+    .learn-more {
+      font-weight: bold;
+      font-size: 18px;
+      margin: 20px auto 0 auto;
+      color: $dark-blue;
+      &:hover {
+        color: lighten($dark-blue, 15%);
+      }
+    }
+    .login {
+      background-color: $dark-blue;
+      color: white;
+      width: 200px;
+      margin: 75px auto 0 auto;
+      font-size: 21px;
+      padding: 15px 0;
+      &:hover {
+        color: darken(white, 10%);
+        background-color: lighten($dark-blue, 5%);
+      }
+
+    }
+  }
+
+  footer {
+    padding: 0;
+    border-top: 0;
+    margin-top: 15px;
+  }
+}
+
+/*-------------------------------------------------------------
+                    BUTTON STYLES
+---------------------------------------------------------------*/
+
+.btn {
+  border: 1px solid rgba(66,66,66,.1);
+  background: rgba(245,245,245,.4);
+  -webkit-transition: all .1s ease-in-out;
+  -moz-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 15px rgba(0,0,0,.2);
+  }
+
+}
+
+
+.btn-primary, .btn-primary:focus {
+  color: #ffffff;
+  border-radius: 6px;
+  padding: 18px 40px;
+  font-size: 28px;
+  font-weight: 600;
+  border: none;
+  background: #f47642;
+  -webkit-transition: all .15s ease-in-out;
+  -moz-transition: all .15s ease-in-out;
+  -o-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+}
+
+.btn-primary:hover, .btn-primary:active {
+  border: none;
+  background: #fa804d;
+  box-shadow: 0 0 20px rgba(0,0,0,.4);
+}
+
+/*-------------------------------------------------------------
+                   FOOTER STYLES
+---------------------------------------------------------------*/
+
+.social {
+  padding: 0;
+  margin: 0 auto;
+  display: table;
+}
+
+.social li {
+  float: left;
+  list-style: none;
+  margin: 10px 7px 5px;
+}
+
+.social li a {
+  width: 40px;
+  height: 40px;
+  color: #000;
+  text-align: center;
+  line-height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  display: table;
+  font-size: 18px;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.social li a:hover {
+  background: #727272;
+  color: #fff;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+footer {
+  background: #ffffff;
+  border-top: 1px solid #e5e5e5;
+  padding: 35px 0;
+}
+
+footer p {
+  color: #4f4f4f;
+  font-size: 16px;
+  margin: 0;
+  padding: 0 20px;
+}
+
+footer p a {
+  color: #424242;
+}
+
+footer p a:hover {
+  color: #424242;
+  text-decoration: underline;
+}
+
+/* #large screen
+================================================== */
+
+@media only screen and (min-width: 1500px) {
+
+  .tutor-home {
+
+    .intro-header {
+      height: 1000px;
+      background-position: 0 -20px;
+    }
+
+    .container {
+
+      .taglines {
+        margin: 320px 0 0 50%;
+
+        div {
+
+          p {
+            font-size: 44px;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+/* #medium screen
+================================================== */
+
+@media only screen and (min-width: 1021px) and (max-width: 1210px) {
+
+  .tutor-home {
+
+    .container {
+
+      .taglines {
+        margin: 200px 0 0 40%;
+      }
+
+    }
+
+  }
+
+}
+
+
+/* #Tablet (Portrait)
+================================================== */
+
+@media only screen and (min-width: 681px) and (max-width: 1020px) {
+
+  .tutor-home {
+
+    header .navbar-default .navbar-brand {
+      margin: 10px 0 0 15px !important;
+    }
+
+    .intro-header {
+      background-position: -40px -40px;
+    }
+
+    .container {
+
+      .taglines {
+        margin: 240px 0 0 20px;
+
+      }
+
+    }
+
+  }
+
+}
+
+/* #header fix
+================================================== */
+
+@media only screen and (min-width: 768px) and (max-width: 1020px) {
+
+  .tutor-home {
+
+    header .navbar-default .navbar-brand {
+      margin: 5px 0 0 0 !important;
+    }
+
+  }
+
+}
+
+/*  #Mobile (Portrait)
+================================================== */
+
+@media only screen and (max-width: 480px) {
+
+  .navbar-collapse.in {
+    overflow-y: visible;
+    display: table;
+    width: 100%;
+  }
+
+  .tutor-home {
+
+    header .navbar-default .navbar-brand {
+      margin: 10px 0 0 15px !important;
+    }
+
+    .intro-header {
+      height: 600px;
+      background-position: -180px 0;
+    }
+
+    .container {
+
+      .taglines {
+        margin: 200px 0 0 0;
+
+        div {
+          width: 100%;
+          padding: 20px;
+          margin: 0 0 20px 0;
+
+          p {
+            font-size: 16px;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .btn-primary, .btn-primary:focus {
+    padding: 14px 20px;
+    font-size: 16px;
+  }
+
+}
+
+/* #Mobile (Landscape)
+================================================== */
+
+@media only screen and (min-width: 480px) and (max-width: 680px) {
+
+  .tutor-home {
+
+    header .navbar-default .navbar-brand {
+      margin: 10px 0 0 15px !important;
+    }
+
+    .intro-header {
+      height: 700px;
+      background-position: -120px 0;
+    }
+
+    .container {
+      width: 100%;
+
+      .taglines {
+        margin: 280px 0 0 20px;
+
+        div {
+          padding: 20px;
+          margin: 0 0 20px 0;
+
+          p {
+            font-size: 24px;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .btn-primary, .btn-primary:focus {
+    padding: 14px 20px;
+    font-size: 24px;
+  }
+
+}

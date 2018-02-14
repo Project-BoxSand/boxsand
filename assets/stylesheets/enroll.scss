@@ -1,0 +1,63 @@
+// Core variables and mixins
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+// Reset and dependencies
+@import "bootstrap/normalize";
+@import "bootstrap/buttons";
+@import "common_colors";
+@import "fonts";
+@import "mixins";
+
+body#enroll {
+  font-family: $tutor-default-font-list;
+  font-weight: 300;
+  color: #424242;
+  padding: 40px;
+
+  @include hero-fullpage-background();
+
+  .splash {
+    margin: 80px auto;
+    max-width: 1000px;
+    padding: 40px;
+    background-color: $tutor-neutral-lighter;
+    text-align: center;
+    h1 {
+      color: #222e66;
+    }
+    h3 {
+      font-weight: 300;
+    }
+
+    .columns {
+      margin: 80px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      > div {
+        flex: 1;
+        background-size: 100px auto;
+        background-repeat: no-repeat;
+        background-position: top center;
+        padding-top: 116px;
+
+        max-width: 280px;
+        text-align: center;
+        margin: 20px auto;
+
+        &.signup { background-image: image-url("student-onboarding/key.svg"); }
+        &.enter-id { background-image: image-url("student-onboarding/student-id.svg"); }
+        &.payment {
+          background-image: image-url("student-onboarding/cost.svg");
+          background-position-y: 10px;
+        }
+      }
+
+    }
+    .btn {
+      @include tutor-button();
+    }
+  }
+}
