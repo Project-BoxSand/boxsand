@@ -14,7 +14,7 @@
    }
 
    .title {
-     background: #0dc0de;
+     background: #00859B;
      height: $title-height;
      display: flex;
      align-items: center;
@@ -37,11 +37,11 @@
      align-self: flex-end;
      width: 100%;
      // flex values are the relative amount each will take up
-     .orange { flex: 1;   background-color: #F47541; }
-     .blue   { flex: 0.6; background-color: #4A773C; }
-     .red    { flex: 0.4; background-color: #00859B; }
-     .yellow { flex: 0.5; background-color: #FFB500; }
-     .teal   { flex: 0.2; background-color: #006A8E; }
+     .orange { flex: 1;   background-color: #DC4405; } //Beaver Orange
+     .blue   { flex: 0.6; background-color: #006A8E; } //Stratoshere
+     .red    { flex: 0.4; background-color: #4A773C; } //Pine Stand
+     .yellow { flex: 0.5; background-color: #FFB500; } //Luminance
+     .teal   { flex: 0.2; background-color: #00859B; } //High Tide
    }
  }
 
