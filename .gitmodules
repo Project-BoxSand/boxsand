@@ -1,0 +1,12 @@
+[submodule "accounts"]
+	path = accounts
+	url = https://github.com/openstax/accounts
+[submodule "tutor-server"]
+	path = tutor-server
+	url = https://github.com/openstax/tutor-server
+[submodule "tutor-js"]
+	path = tutor-js
+	url = https://github.com/openstax/tutor-js
+[submodule "exercises"]
+	path = exercises
+	url = https://github.com/openstax/exercises
