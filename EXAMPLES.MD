@@ -1,4 +1,4 @@
-W("a")
+("a")
 
 keen-cli
 Typeahead
