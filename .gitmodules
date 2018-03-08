@@ -10,3 +10,6 @@
 [submodule "exercises"]
 	path = exercises
 	url = https://github.com/openstax/exercises
+[submodule "common-web"]
+	path = common-web
+	url = https://github.com/keen/common-web
