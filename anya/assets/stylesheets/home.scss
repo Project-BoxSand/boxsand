@@ -188,7 +188,7 @@ header {
 ---------------------------------------------------------------*/
 
 .tutor-home {
-  $dark-blue: #002469;
+  $dark-blue: #FFFFFF;
   .body-container {
     width: 100%;
     min-height: 700px;
@@ -230,7 +230,7 @@ header {
     }
     .login {
       background-color: $dark-blue;
-      color: white;
+      color: #002469;
       width: 200px;
       margin: 75px auto 0 auto;
       font-size: 21px;
